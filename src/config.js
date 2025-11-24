@@ -8,7 +8,9 @@ const config = {
 
   //baseURL: 'https://dealership.gandhitvs.in/api/v1'
 
-  baseURL: 'http://localhost:5000/api/v1'
+  // baseURL: 'http://localhost:5000/api/v1'
+
+  baseURL: 'http://192.168.1.38:5000/api/v1'
 };
 
 export default config;

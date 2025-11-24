@@ -1,0 +1,134 @@
+
+.commission-payments-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filter-btn, .receipt-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .subdealer-info {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .subdealer-info h4 {
+    margin: 0;
+    color: #3c4b64;
+  }
+  
+  .subdealer-info p {
+    margin: 5px 0 0;
+    color: #768192;
+  }
+  
+  .payments-table-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .booking-commissions {
+    margin-top: 30px;
+  }
+  
+  .booking-commissions h4 {
+    color: #3c4b64;
+    margin-bottom: 15px;
+  }
+  
+  .no-data {
+    color: #6c757d;
+  }
+  
+  .no-data i {
+    color: #ced4da;
+  }
+  
+  .table th {
+    background-color: #f8f9fa;
+    color: #3c4b64;
+    font-weight: 600;
+  }
+  
+  /* Active Filters */
+  .active-filters {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .active-filters h5 {
+    margin-bottom: 10px;
+    color: #3c4b64;
+  }
+  
+  .filter-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .commission-payments-container {
+      padding: 10px;
+    }
+    
+    .header-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .action-buttons {
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    .action-buttons .btn {
+      width: 100%;
+    }
+    
+    .payments-table-container {
+      padding: 10px;
+      overflow-x: auto;
+    }
+    
+    .table {
+      font-size: 14px;
+    }
+    
+    .active-filters {
+      padding: 10px;
+    }
+    
+    .filter-badges {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
