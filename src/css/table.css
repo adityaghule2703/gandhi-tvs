@@ -1,0 +1,476 @@
+*{
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.title{
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+.table-container {
+  border-radius: 2px;
+  border: none;
+  border-top: 4px solid #2759a2;
+  overflow: hidden;
+}
+
+  .responsive-table-wrapper {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .responsive-table thead th {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+  }
+
+
+  .responsive-table tfoot td,
+.responsive-table .total-row td {
+position: sticky;
+bottom: 0;
+background: #fff;
+z-index: 9;
+}
+  
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-button{
+    background-color: #007bff;
+    border-radius: 2px;
+    padding: 5px;
+    color: white;
+    border: none;
+}
+.approve-btn, .reject-btn {
+    color: white !important;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .card-header{
+    background-color: white;
+  }
+  .approve-btn {
+    margin-right: 8px;
+  }
+  .action-icons{
+     font-size: 15px;
+     cursor: pointer;
+     display: flex;
+  }
+  .view-icon {
+    color: var(--cui-primary);
+    color:#007bff ;
+  }
+  .delete-icon{
+    color: #dc3545
+  }
+  .lock-icon{
+    color:#007bff ;
+  }
+ 
+.action-button{
+  /* border: none; */
+  border-radius: 2px;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+ 
+.responsive-table {
+  width: 100%;
+}
+.sortable-header {
+  cursor: pointer;
+  position: relative;
+}
+ 
+.sortable-header:hover {
+  background-color: #f5f5f5;
+}
+
+.action-btn{
+  background-color: #2759a2;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+.action-btn:hover{
+  background-color: #2759a2;
+  color: #fff;
+}
+.option-button{
+  background-color: #f4f4f4;
+  border-color: #adadad;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  min-width: auto;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+.option-button:hover{
+  background-color: #e7e7e7;
+  border-color: #adadad;
+}
+.option-button .icon {
+  margin-right: 0.25rem;
+  flex-shrink: 0;
+}
+.icon{
+  font-weight: bold;
+}
+
+.square-search {
+border-radius: 0 !important;
+max-width: '350px';
+height: '30px';
+}
+
+.settings-btn {
+background-color: #2759a2;
+border: none;
+padding: 0.25rem 0.5rem;
+border-radius: 2px;
+}
+
+.settings-btn:hover {
+background-color: #1e4a8a;
+}
+
+.dropdown-container {
+position: relative;
+display: inline-block;
+min-width: fit-content;
+
+}
+
+.dropdown-menu {
+position: absolute;
+top: 100%;
+right: 0;
+z-index: 1000;
+min-width: 10rem;
+padding: 0.5rem 0;
+margin: 0.125rem 0 0;
+font-size: 0.875rem;
+color: #212529;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid rgba(0, 0, 0, 0.15);
+border-radius: 2px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+display: block;
+width: 100%;
+padding: 0.375rem 1rem;
+clear: both;
+font-weight: 400;
+color: #212529;
+text-align: inherit;
+white-space: nowrap;
+background-color: transparent;
+border: 0;
+cursor: pointer;
+}
+
+.dropdown-item:hover {
+background-color: #f8f9fa;
+color: #16181b;
+}
+.sortable-header {
+cursor: pointer;
+position: relative;
+user-select: none;
+}
+
+.sortable-header:hover {
+background-color: #f5f5f5;
+}
+
+@media (max-width: 1200px) {
+.responsive-table {
+  font-size: 0.875rem;
+}
+
+.settings-btn {
+  padding: 0.2rem 0.4rem;
+}
+}
+@media (max-width: 768px) {
+.option-button {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.option-button .icon {
+  margin-right: 0.125rem;
+}
+}
+.selected-row td {
+background-color: #dff0d8 !important;
+}
+.use-product-row td{
+background-color: #dff0d8 !important;
+}
+.damage-product-row td{
+ background-color: #f2dede !important;
+}
+.damage-row td{
+background-color: #d9edf7;
+}
+.total-row td {
+background-color: #dff0d8 !important;
+}
+
+thead, tbody, tfoot, tr, td, th {
+border-color: #f4f4f4;
+border-style: solid;
+border-width: 0;
+}
+
+.summary-report{
+background-color:#00c0ef;
+border: 1px solid #00acd6;
+border-radius: 6px;
+padding: 15px 20px;
+margin-bottom: 20px;
+color: #fff;
+width: 100%;
+}
+.summary-title{
+font-weight: 600; 
+font-size: 18px;
+margin-bottom: 8px;
+}
+.summary-list{
+list-style: none;
+padding-left: 0;
+margin: 0
+}
+
+/*************************** New Table Style ***************************/
+
+  /******************    Booking Status ***********************/
+
+  .draft {
+    background-color: #f3f4f6;
+    color: #374151;
+  }
+  
+  .pending {
+    background-color: #dbeafe;
+    color: #1e40af;
+  }
+  .pending_approval{
+    background-color: #dbeafe; 
+    color: #1e40af;
+  }
+  .approved{
+    background-color: #dcfce7;
+    color: #166534;
+  }
+  .in_stock{
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .rejected{
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+.not_approved {
+    background-color: #fee2e2;
+    color: #991b1b;
+     padding: 5px;
+    border-radius: 10px;
+  }
+  .completed {
+    background-color: #f3e8ff;
+    color: #6b21a8;
+  }
+  
+  .cancelled {
+    background-color: #fef9c3;
+    color: #854d0e;
+  }
+.allocated{
+  background-color: #4CAF50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+  .statusCell {
+    padding: 0.5rem;
+    border-radius: 15px;
+    font-weight: 500;
+  }
+  .user-status{
+    padding: 5px;
+    border-radius: 0.375rem;
+    font-weight:500;
+  }
+.status-badge.active{
+    background-color: #dcfce7;
+    color: #166534;
+}
+.inactive{
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+.frozen{
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+.extended{
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
+
+.upload-kyc-btn {
+  width: 41px;
+  height: 32px;
+  padding: 5px 10px;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+
+
+}
+.upload-kyc-btn:hover {
+  background-color: #153291;
+}
+.upload-kyc-btn:hover {
+  background-color: #153291;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.import-csv-btn,
+.export-csv-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.import-csv-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.export-csv-btn {
+  background-color: #dc4226;
+  color: white;
+}
+
+.import-csv-btn:hover {
+  background-color: #5a6268;
+}
+
+.export-csv-btn:hover {
+  background-color: #c53218;
+}
+
+/***************************  Commission range filter  **************************/
+
+.filter-btn, .clear-filter-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* margin-right: 5px; */
+}
+
+.filter-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.clear-filter-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.filter-btn:hover {
+  background-color: #5a6268;
+}
+
+.clear-filter-btn:hover {
+  background-color: #c82333;
+}
+
+details summary {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+details div {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+.no-filter-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #666;
+}
+/**********************  Upload Deal form  *****************************/
+.view-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view-button:hover {
+  background-color: #45a049;
+}
+
+.upload-button {
+  background-color:  #1e40af;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.upload-button:hover {
+  background-color:  #243c7c;
+  
+}
+/************/
+
+
+.awaiting-approval-text {
+  color: #ff9800;
+  font-weight: bold;
+  font-style: italic;
+}

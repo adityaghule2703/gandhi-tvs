@@ -1,0 +1,26 @@
+.branches-section {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .branch-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .branch-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .add-branch-button {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }

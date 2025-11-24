@@ -1,0 +1,39 @@
+.upload-button {
+  padding: 6px 6px;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.document-preview {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  position: relative;
+}
+
+.document-preview img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.view-full {
+  display: block;
+  font-size: 12px;
+  color: #2196F3;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.action-button {
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

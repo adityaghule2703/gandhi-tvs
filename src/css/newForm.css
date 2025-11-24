@@ -1,0 +1,21 @@
+.employee-management-container {
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .employee-management-container .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  .card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e4e5e6;
+    padding: 15px 20px;
+  }

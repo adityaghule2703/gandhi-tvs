@@ -1,0 +1,43 @@
+.login-card {
+    border-radius: 0 !important;
+  }
+  .login-button {
+    background-color: #2759a2;
+    border-color: #2759a2;
+    color: white;
+    border-radius: 0 !important;
+  }
+  .login-button:hover{
+    background-color: #2759a2;
+    color: white;
+  }
+  .forgot-link {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  .forgot-link:hover {
+    color: #72afd2;
+  }
+  
+  .footer-text {
+    text-align: right;
+  }
+  .sub-footer {
+    color: #337ab7;
+  }
+  .sub-footer:hover {
+    color: #72afd2;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  .login-tab-item .nav-link {
+    border-radius: 0 !important;
+    border-top: 3px solid transparent;
+    color: black;
+  }
+  
+  .login-tab-item .nav-link.active {
+    border-top: 4px solid #2759a2;
+  }

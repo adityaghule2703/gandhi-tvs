@@ -1,0 +1,281 @@
+/* 
+.kyc-documents-container {
+    padding: 15px;
+  }
+  
+  .document-card {
+    margin-bottom: 20px;
+    height: 100%;
+  }
+  
+  .document-image {
+    max-width: 100%;
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #eee;
+  } */
+
+
+  /* KYC View Styles */
+.kyc-modal .modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.kyc-modal .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 1.5rem;
+}
+
+.kyc-modal .modal-body {
+  padding: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.kyc-modal .modal-footer {
+  border-top: 1px solid #dee2e6;
+  padding: 1rem 1.5rem;
+}
+
+.kyc-info-bar {
+  background-color: #e9ecef;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.kyc-info-item {
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  text-transform: capitalize;
+  font-size: 0.75rem;
+  padding: 0.35em 0.65em;
+}
+
+.kyc-documents-container {
+  padding: 20px;
+}
+
+.document-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.document-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.document-card-header {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+}
+
+.document-card .card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+}
+
+.document-preview-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.document-thumbnail {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-thumbnail:hover .document-overlay {
+  opacity: 1;
+}
+
+.document-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.thumbnail-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.pdf-thumbnail {
+  text-align: center;
+  padding: 20px;
+}
+
+.pdf-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #e63946;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-weight: bold;
+}
+
+.document-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.document-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  height: 200px;
+  border: 1px dashed #dee2e6;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+}
+
+.document-placeholder p {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.upload-kyc-btn {
+  display: flex;
+  align-items: center;
+}
+
+.document-viewer-modal .modal-dialog {
+  max-width: 95%;
+  height: 95%;
+}
+
+.document-viewer-modal .modal-content {
+  height: 100%;
+}
+
+.document-viewer-body {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.document-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 70vh;
+  border: none;
+}
+
+.document-full-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .kyc-info-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .kyc-info-item {
+    font-size: 0.85rem;
+  }
+  
+  .document-card .card-body {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kyc-modal .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  .kyc-documents-container {
+    padding: 15px;
+  }
+  
+  .document-thumbnail {
+    height: 180px;
+  }
+  
+  .modal-footer .d-flex {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .action-buttons {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .modal-footer .btn-secondary {
+    order: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .document-card .card-body {
+    min-height: 200px;
+  }
+  
+  .document-thumbnail {
+    height: 150px;
+  }
+  
+  .pdf-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 0.9rem;
+  }
+}

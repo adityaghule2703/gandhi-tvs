@@ -1,0 +1,149 @@
+/* 
+.dashboard-card {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bg-primary.bg-opacity-10 .text-primary,
+  .bg-success.bg-opacity-10 .text-success,
+  .bg-info.bg-opacity-10 .text-info {
+    opacity: 1 !important;
+  }
+
+  .text-uppercase {
+    letter-spacing: 0.5px;
+  }
+  
+  .fw-medium {
+    font-weight: 500;
+  } */
+
+
+
+  .account-dashboard {
+    padding: 20px 0;
+  }
+
+  .metric-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .shadow-hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .metric-icon {
+    transition: all 0.3s ease;
+  }
+  
+  .metric-card:hover .metric-icon {
+    transform: scale(1.1);
+  }
+  
+
+  .status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+ 
+  .progress {
+    background-color: #e9ecef;
+    border-radius: 10px;
+  }
+  
+  .progress-bar {
+    border-radius: 10px;
+  }
+  
+  .table-borderless td, .table-borderless th {
+    border: none;
+  }
+  
+  .table tbody tr {
+    transition: background-color 0.2s ease;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f8f9fa;
+  }
+ 
+  .badge {
+    font-size: 0.75em;
+    font-weight: 600;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .text-uppercase {
+    letter-spacing: 0.5px;
+    font-size: 0.8em;
+  }
+  
+  .fw-semibold {
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .metric-card {
+      margin-bottom: 1rem;
+    }
+    
+    .card-body {
+      padding: 1rem;
+    }
+    
+    .table-responsive {
+      font-size: 0.875rem;
+    }
+  }
+  
+  .spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .alert {
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .bg-primary { background-color: #007bff !important; }
+  .bg-success { background-color: #28a745 !important; }
+  .bg-info { background-color: #17a2b8 !important; }
+  .bg-warning { background-color: #ffc107 !important; }
+  .bg-danger { background-color: #dc3545 !important; }
+  .bg-secondary { background-color: #6c757d !important; }
+  
+  .bg-opacity-10 {
+    opacity: 0.1;
+  }
+
+  .dashboard-card * {
+    transition: all 0.3s ease;
+  }
+  
+  .account-dashboard h2 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }

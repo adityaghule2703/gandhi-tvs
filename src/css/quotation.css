@@ -1,0 +1,155 @@
+.quotation-container {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  
+  .logo-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .tvs-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tvs-logo {
+    height: 30px; 
+    width: auto;
+  }
+  
+  .quotation-title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .header h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .quotation-details {
+    margin-bottom: 20px;
+  }
+  
+  .salutation {
+    margin-bottom: 20px;
+  }
+  
+  .price-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  
+  .price-table table {
+    width: 100%;
+    border: 1px solid #000;
+  }
+  
+  .price-table th, .price-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .price-table .total-row {
+    font-weight: bold;
+  }
+  
+  .test-ride, .powered-date, .footer-signature {
+    margin: 10px 0;
+  }
+  
+  .essential-fitments {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+  }
+  
+  .essential-fitments table {
+    width: 100%;
+    border: 1px solid #000;
+  }
+  
+  .essential-fitments th, .essential-fitments td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .documents-list {
+    margin: 20px 0;
+  }
+  
+  .documents-list ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .terms-conditions {
+    margin: 20px 0;
+  }
+  
+  .terms-conditions ol {
+    padding-left: 20px;
+  }
+  
+  .terms-conditions ol ol {
+    padding-left: 20px;
+    list-style-type: lower-alpha;
+  }
+  
+  .closing {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .offer-section {
+    margin-top: 30px;
+  }
+  
+  .offer-section h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .offer-section h2 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+  }
+  
+  .offer-section ul {
+    padding-left: 20px;
+  }
+  
+  .offer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .divider {
+    border-top: 1px solid #000;
+    margin: 20px 0;
+  }
+  
+  .right-place, .search-tvs {
+    margin: 15px 0;
+    text-align: center;
+  }
