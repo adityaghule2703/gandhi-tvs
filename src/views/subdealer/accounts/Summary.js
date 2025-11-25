@@ -23,7 +23,7 @@ import {
   CCol,
   CRow
 } from '@coreui/react';
-import { axiosInstance, getDefaultSearchFields, SearchOutlinedIcon, useTableFilter, usePagination } from 'src/utils/tableImports';
+import { axiosInstance, getDefaultSearchFields, SearchOutlinedIcon, useTableFilter } from 'src/utils/tableImports';
 import CIcon from '@coreui/icons-react';
 import { cilMagnifyingGlass } from '@coreui/icons';
 
@@ -55,11 +55,6 @@ function Summary() {
 
   const [pendingPayments, setPendingPayments] = useState([]);
   const [filteredPendingPayments, setFilteredPendingPayments] = useState([]);
-
-  const { currentRecords: currentCustomerRecords, PaginationOptions: CustomerPaginationOptions } = usePagination(filteredBookings);
-  const { currentRecords: currentSubdealerRecords, PaginationOptions: SubdealerPaginationOptions } = usePagination(filteredSubdealer);
-  const { currentRecords: currentCompleteRecords, PaginationOptions: CompletePaginationOptions } = usePagination(filteredCompletePayments);
-  const { currentRecords: currentPendingRecords, PaginationOptions: PendingPaginationOptions } = usePagination(filteredPendingPayments);
 
   useEffect(() => {
     fetchData();
@@ -270,14 +265,14 @@ function Summary() {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentCustomerRecords.length === 0 ? (
+                    {filteredBookings.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan="9" className="text-center">
                           {customerSearchTerm ? 'No matching bookings found' : 'No bookings available'}
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentCustomerRecords.map((booking, index) => (
+                      filteredBookings.map((booking, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{index + 1}</CTableDataCell>
                           <CTableDataCell>{booking.bookingNumber}</CTableDataCell>
@@ -297,10 +292,6 @@ function Summary() {
                     )}
                   </CTableBody>
                 </CTable>
-              </div>
-              
-              <div className="d-flex justify-content-center mt-3">
-                <CustomerPaginationOptions />
               </div>
             </CTabPane>
 
@@ -334,14 +325,14 @@ function Summary() {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentSubdealerRecords.length === 0 ? (
+                    {filteredSubdealer.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan="7" className="text-center">
                           {subdealerSearchTerm ? 'No matching subdealers found' : 'No subdealers available'}
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentSubdealerRecords.map((subdealer, index) => (
+                      filteredSubdealer.map((subdealer, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{index + 1}</CTableDataCell>
                           <CTableDataCell>{subdealer.name}</CTableDataCell>
@@ -361,10 +352,6 @@ function Summary() {
                     )}
                   </CTableBody>
                 </CTable>
-              </div>
-              
-              <div className="d-flex justify-content-center mt-3">
-                <SubdealerPaginationOptions />
               </div>
             </CTabPane>
 
@@ -400,14 +387,14 @@ function Summary() {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentCompleteRecords.length === 0 ? (
+                    {filteredCompletePayments.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan="9" className="text-center">
                           {completeSearchTerm ? 'No matching complete payments found' : 'No complete payments available'}
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentCompleteRecords.map((booking, index) => (
+                      filteredCompletePayments.map((booking, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{index + 1}</CTableDataCell>
                           <CTableDataCell>{booking.bookingNumber}</CTableDataCell>
@@ -425,10 +412,6 @@ function Summary() {
                     )}
                   </CTableBody>
                 </CTable>
-              </div>
-              
-              <div className="d-flex justify-content-center mt-3">
-                <CompletePaginationOptions />
               </div>
             </CTabPane>
 
@@ -464,14 +447,14 @@ function Summary() {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentPendingRecords.length === 0 ? (
+                    {filteredPendingPayments.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan="9" className="text-center">
                           {pendingSearchTerm ? 'No matching pending payments found' : 'No pending payments available'}
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentPendingRecords.map((booking, index) => (
+                      filteredPendingPayments.map((booking, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{index + 1}</CTableDataCell>
                           <CTableDataCell>{booking.bookingNumber}</CTableDataCell>
@@ -489,10 +472,6 @@ function Summary() {
                     )}
                   </CTableBody>
                 </CTable>
-              </div>
-              
-              <div className="d-flex justify-content-center mt-3">
-                <PendingPaginationOptions />
               </div>
             </CTabPane>
           </CTabContent>

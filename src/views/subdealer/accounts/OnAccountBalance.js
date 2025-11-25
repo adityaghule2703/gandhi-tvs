@@ -7,7 +7,6 @@ import {
   SearchOutlinedIcon,
   getDefaultSearchFields,
   useTableFilter,
-  usePagination,
   axiosInstance,
   showError,
   Link
@@ -33,7 +32,6 @@ import {
 
 const OnAccountBalance = () => {
   const { data, setData, filteredData, setFilteredData, handleFilter } = useTableFilter([]);
-  const { currentRecords, PaginationOptions } = usePagination(filteredData);
 
   useEffect(() => {
     fetchData();
@@ -390,14 +388,14 @@ const OnAccountBalance = () => {
                 </CTableRow>
               </CTableHead>
               <CTableBody>
-                {currentRecords.length === 0 ? (
+                {filteredData.length === 0 ? (
                   <CTableRow>
                     <CTableDataCell colSpan={hasPermission('SUBDEALER_ON_ACCOUNT', 'CREATE') ? "8" : "7"} className="text-center">
                       No subdealers available
                     </CTableDataCell>
                   </CTableRow>
                 ) : (
-                  currentRecords.map((subdealer, index) => (
+                  filteredData.map((subdealer, index) => (
                     <CTableRow key={index}>
                       <CTableDataCell>{index + 1}</CTableDataCell>
                       <CTableDataCell>{subdealer.name}</CTableDataCell>
@@ -422,10 +420,6 @@ const OnAccountBalance = () => {
                 )}
               </CTableBody>
             </CTable>
-          </div>
-          
-          <div className="d-flex justify-content-center mt-3">
-            <PaginationOptions />
           </div>
         </CCardBody>
       </CCard>

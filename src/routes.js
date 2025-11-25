@@ -398,12 +398,15 @@ const AddCommission = React.lazy(() => import('./views/subdealer/commission/AddC
 const CalculateCommission = React.lazy(() => import('./views/subdealer/commission/CalculateCommission'))
 const SubdealerDeliveryChallan = React.lazy(() => import('./views/subdealer/booking/DeliveryChallan'))
 const AllBooking = React.lazy(() => import('./views/subdealer/booking/AllBooking'))
+const SubdealerNewBooking = React.lazy(() => import('./views/subdealer/booking/SubdealerNewBooking'))
 
 //User Management
 const AllRoles = React.lazy(()=>import('./views/roles/AllRoles'))
 const CreateRole = React.lazy(()=>import('./views/roles/CreateRole'))
 const AddUser = React.lazy(()=>import('./views/users/AddUser'))
 const UsersList = React.lazy(()=>import('./views/users/UsersList'))
+const BufferList = React.lazy(()=>import('./views/buffer/BufferList'))
+const ManagerDeviation = React.lazy(()=>import('./views/users/ManagerDeviation'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -545,8 +548,8 @@ const routes = [
   { path:'/subdealer-list', name:'Subdealer List', element:SubdealerList},
   { path:'/add-subdealer', name:'Add Subdealer', element:AddSubdealer},
   { path:'/update-subdealer/:id', name:'Update Subdealer', element:AddSubdealer},
-  { path:'/subdealer-booking', name:'Subdealer Booking', element:NewBooking},
-  { path:'/update-subdealer-booking/:id', name:'Update Subdealer Booking', element:NewBooking},
+  { path:'/subdealer-booking', name:'Subdealer Booking', element:SubdealerNewBooking},
+  { path:'/update-subdealer-booking/:id', name:'Update Subdealer Booking', element:SubdealerNewBooking},
   { path:'/subdealer-all-bookings', name:'Subdealer All Bookings', element:AllBooking},
   { path:'/subdealer-account/receipt', name:'Subdealer Receipt', element:SubdealerReceipts},
   { path:'/subdealer-account/add-balance', name:'Add Balance', element:AddBalance},
@@ -565,9 +568,13 @@ const routes = [
 
   //User Management
   { path:'/roles/all-role', name:'All Roles', element:AllRoles},
+  { path:'/roles/update-role/:id', name:'Update Role', element:CreateRole},
   { path:'/roles/create-role', name:'Create Role', element:CreateRole},
   { path:'/users/add-user', name:'Add User', element:AddUser},
+  { path:'/users/update-user/:id', name:'Update User', element:AddUser},
   { path:'/users/users-list', name:'Users List', element:UsersList},
+  { path:'/buffer/buffer-list', name:'Buffer List', element:BufferList},
+  { path:'/users/manager-deviation', name:'Manager Deviation', element:ManagerDeviation},
   
 
 ]

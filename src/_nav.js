@@ -1304,13 +1304,13 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Buffer Report',
-    to: '/theme/typography',
+    to: '/buffer/buffer-list',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Manager Deviation',
-    to: '/theme/typography',
+    to: '/users/manager-deviation',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {

@@ -10,7 +10,6 @@ import {
   SearchOutlinedIcon,
   getDefaultSearchFields,
   useTableFilter,
-  usePagination,
   showError,
   axiosInstance,
   showSuccess
@@ -71,11 +70,6 @@ const AllBooking = () => {
     setFilteredData: setFilteredAllocated,
     handleFilter: handleAllocatedFilter
   } = useTableFilter([]);
-
-  // Pagination for each tab
-  const { currentRecords: pendingRecords, PaginationOptions: PendingPagination } = usePagination(filteredPending);
-  const { currentRecords: approvedRecords, PaginationOptions: ApprovedPagination } = usePagination(filteredApproved);
-  const { currentRecords: allocatedRecords, PaginationOptions: AllocatedPagination } = usePagination(filteredAllocated);
 
   const [viewModalVisible, setViewModalVisible] = useState(false);
   const [selectedBooking, setSelectedBooking] = useState(null);
@@ -460,26 +454,17 @@ const AllBooking = () => {
           <CTabContent>
             {/* Pending Approvals Tab */}
             <CTabPane visible={activeTab === 0} className="p-3">
-              {renderBookingTable(pendingRecords, 0)}
-              <div className="d-flex justify-content-center mt-3">
-                <PendingPagination />
-              </div>
+              {renderBookingTable(filteredPending, 0)}
             </CTabPane>
 
             {/* Approved Tab */}
             <CTabPane visible={activeTab === 1} className="p-3">
-              {renderBookingTable(approvedRecords, 1)}
-              <div className="d-flex justify-content-center mt-3">
-                <ApprovedPagination />
-              </div>
+              {renderBookingTable(filteredApproved, 1)}
             </CTabPane>
 
             {/* Allocated Tab */}
             <CTabPane visible={activeTab === 2} className="p-3">
-              {renderBookingTable(allocatedRecords, 2)}
-              <div className="d-flex justify-content-center mt-3">
-                <AllocatedPagination />
-              </div>
+              {renderBookingTable(filteredAllocated, 2)}
             </CTabPane>
           </CTabContent>
         </CCardBody>

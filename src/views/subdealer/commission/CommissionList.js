@@ -32,7 +32,6 @@ import {
   MenuItem,
   SearchOutlinedIcon,
   useTableFilter,
-  usePagination,
   confirmDelete,
   showError,
   showSuccess,
@@ -70,7 +69,6 @@ const CommissionList = () => {
   const [dateRangeData, setDateRangeData] = useState(null);
   const [loadingDateRange, setLoadingDateRange] = useState(false);
   const { data, setData, filteredData, setFilteredData, handleFilter } = useTableFilter([]);
-  const { currentRecords, PaginationOptions } = usePagination(filteredData);
 
   const hasEditPermission = hasPermission('SUBDEALER_COMMISSION', 'UPDATE');
   const hasAddPermission = hasPermission('SUBDEALER_COMMISSION', 'CREATE');
@@ -391,7 +389,6 @@ const CommissionList = () => {
                 onChange={(e) => handleCommissionSearch(e.target.value)}
                 className="square-search"
               />
-        
             </div>
           </div>
         </CCardHeader>
@@ -415,14 +412,14 @@ const CommissionList = () => {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentRecords.length === 0 ? (
+                    {filteredData.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan={priceHeaders.length + 2} className="text-center text-muted">
                           No commission data available for this subdealer
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentRecords.map((item, index) => (
+                      filteredData.map((item, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{item.model_details?.model_name || 'N/A'}</CTableDataCell>
                           <CTableDataCell>{item.model_details?.type || 'N/A'}</CTableDataCell>
@@ -446,14 +443,14 @@ const CommissionList = () => {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentRecords.length === 0 ? (
+                    {filteredData.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan={showActionColumn ? 5 : 4} className="text-center text-muted">
                           No commission data available for this subdealer
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentRecords.map((item, index) => (
+                      filteredData.map((item, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{index + 1}</CTableDataCell>
                           <CTableDataCell>{item.model_details?.model_name || 'N/A'}</CTableDataCell>
@@ -497,10 +494,6 @@ const CommissionList = () => {
                   </CTableBody>
                 </CTable>
               )}
-              
-              <div className="d-flex justify-content-center mt-3">
-                <PaginationOptions />
-              </div>
             </div>
           )}
         </CCardBody>

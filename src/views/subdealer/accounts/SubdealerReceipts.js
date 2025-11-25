@@ -22,7 +22,7 @@ import {
   CTableDataCell,
   CBadge
 } from '@coreui/react';
-import { axiosInstance, getDefaultSearchFields, SearchOutlinedIcon, useTableFilter, usePagination } from 'src/utils/tableImports';
+import { axiosInstance, getDefaultSearchFields, SearchOutlinedIcon, useTableFilter } from 'src/utils/tableImports';
 import SubdealerReceiptModal from './SubdealerReceiptModel';
 import { hasPermission } from 'src/utils/permissionUtils';
 import CIcon from '@coreui/icons-react';
@@ -59,9 +59,6 @@ function SubdealerReceipts() {
     setFilteredData: setFilteredLedger,
     handleFilter: handleLedgerFilter
   } = useTableFilter([]);
-
-  const { currentRecords: currentPendingRecords, PaginationOptions: PendingPaginationOptions } = usePagination(filteredPendingBookings);
-  const { currentRecords: currentCompletedRecords, PaginationOptions: CompletedPaginationOptions } = usePagination(filteredCompletedBookings);
 
   useEffect(() => {
     fetchData();
@@ -184,14 +181,14 @@ function SubdealerReceipts() {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentPendingRecords.length === 0 ? (
+                    {filteredPendingBookings.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan={hasPermission('FINANCE_DISBURSEMENT', 'CREATE') ? "10" : "9"} className="text-center">
                           {pendingSearchTerm ? 'No matching pending bookings found' : 'No pending bookings available'}
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentPendingRecords.map((booking, index) => (
+                      filteredPendingBookings.map((booking, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{index + 1}</CTableDataCell>
                           <CTableDataCell>{booking.bookingNumber}</CTableDataCell>
@@ -221,10 +218,6 @@ function SubdealerReceipts() {
                     )}
                   </CTableBody>
                 </CTable>
-              </div>
-              
-              <div className="d-flex justify-content-center mt-3">
-                <PendingPaginationOptions />
               </div>
             </CTabPane>
             
@@ -259,14 +252,14 @@ function SubdealerReceipts() {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentCompletedRecords.length === 0 ? (
+                    {filteredCompletedBookings.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan="9" className="text-center">
                           {completedSearchTerm ? 'No matching completed payments found' : 'No completed payments available'}
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentCompletedRecords.map((booking, index) => (
+                      filteredCompletedBookings.map((booking, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{index + 1}</CTableDataCell>
                           <CTableDataCell>{booking.bookingNumber}</CTableDataCell>
@@ -284,10 +277,6 @@ function SubdealerReceipts() {
                     )}
                   </CTableBody>
                 </CTable>
-              </div>
-              
-              <div className="d-flex justify-content-center mt-3">
-                <CompletedPaginationOptions />
               </div>
             </CTabPane>
           </CTabContent>

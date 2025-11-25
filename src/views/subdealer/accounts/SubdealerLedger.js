@@ -25,7 +25,7 @@ import {
   CTableDataCell,
   CAlert
 } from '@coreui/react';
-import { axiosInstance, getDefaultSearchFields, SearchOutlinedIcon, usePagination, useTableFilter, showError } from 'src/utils/tableImports';
+import { axiosInstance, getDefaultSearchFields, SearchOutlinedIcon, useTableFilter, showError } from 'src/utils/tableImports';
 import tvsLogo from '../../../assets/images/logo.png';
 import config from 'src/config';
 import CIcon from '@coreui/icons-react';
@@ -41,7 +41,6 @@ function SubdealerLedger() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const { data, setData, filteredData, setFilteredData, handleFilter } = useTableFilter([]);
-  const { currentRecords, PaginationOptions } = usePagination(filteredData);
 
   useEffect(() => {
     fetchData();
@@ -439,14 +438,14 @@ function SubdealerLedger() {
                     </CTableRow>
                   </CTableHead>
                   <CTableBody>
-                    {currentRecords.length === 0 ? (
+                    {filteredData.length === 0 ? (
                       <CTableRow>
                         <CTableDataCell colSpan="7" className="text-center">
                           No subdealers available
                         </CTableDataCell>
                       </CTableRow>
                     ) : (
-                      currentRecords.map((subdealer, index) => (
+                      filteredData.map((subdealer, index) => (
                         <CTableRow key={index}>
                           <CTableDataCell>{index + 1}</CTableDataCell>
                           <CTableDataCell>{subdealer.name}</CTableDataCell>
@@ -468,10 +467,6 @@ function SubdealerLedger() {
                     )}
                   </CTableBody>
                 </CTable>
-              </div>
-              
-              <div className="d-flex justify-content-center mt-3">
-                <PaginationOptions />
               </div>
             </CTabPane>
             

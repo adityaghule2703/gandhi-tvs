@@ -5,7 +5,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy, faFileExcel, faFilePdf, faFileCsv } from '@fortawesome/free-solid-svg-icons'
 import { CSVLink } from 'react-csv'
-// import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'
+ import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'
 import { getDefaultSearchFields, useTableFilter } from './tableFilters'
 import { usePagination } from './pagination.jsx'
 import { copyToClipboard, exportToCsv, exportToExcel, exportToPdf } from './tableExports'
@@ -26,8 +26,8 @@ export {
   faFilePdf,
   faFileCsv,
   CSVLink,
-  // FaCheckCircle,
-  // FaTimesCircle,
+  FaCheckCircle,
+   FaTimesCircle,
   getDefaultSearchFields,
   useTableFilter,
   usePagination,

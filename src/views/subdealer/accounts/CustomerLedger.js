@@ -7,7 +7,6 @@ import {
   SearchOutlinedIcon,
   getDefaultSearchFields,
   useTableFilter,
-  usePagination,
   axiosInstance
 } from 'src/utils/tableImports';
 import tvsLogo from '../../../assets/images/logo.png';
@@ -32,7 +31,6 @@ import {
 
 const CustomerLedger = () => {
   const { data, setData, filteredData, setFilteredData, handleFilter } = useTableFilter([]);
-  const { currentRecords, PaginationOptions } = usePagination(filteredData);
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -325,14 +323,14 @@ const CustomerLedger = () => {
                 </CTableRow>
               </CTableHead>
               <CTableBody>
-                {currentRecords.length === 0 ? (
+                {filteredData.length === 0 ? (
                   <CTableRow>
                     <CTableDataCell colSpan="10" className="text-center">
                       No ledger details available
                     </CTableDataCell>
                   </CTableRow>
                 ) : (
-                  currentRecords.map((booking, index) => (
+                  filteredData.map((booking, index) => (
                     <CTableRow key={index}>
                       <CTableDataCell>{index + 1}</CTableDataCell>
                       <CTableDataCell>{booking.bookingNumber}</CTableDataCell>
@@ -357,10 +355,6 @@ const CustomerLedger = () => {
                 )}
               </CTableBody>
             </CTable>
-          </div>
-          
-          <div className="d-flex justify-content-center mt-3">
-            <PaginationOptions />
           </div>
         </CCardBody>
       </CCard>

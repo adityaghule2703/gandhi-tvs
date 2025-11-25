@@ -7,7 +7,6 @@ import {
   SearchOutlinedIcon,
   getDefaultSearchFields,
   useTableFilter,
-  usePagination,
   axiosInstance
 } from 'src/utils/tableImports';
 import tvsLogo from '../../../assets/images/logo.png';
@@ -30,7 +29,6 @@ import {
 
 const DeliveryChallan = () => {
   const { data, setData, filteredData, setFilteredData, handleFilter } = useTableFilter([]);
-  const { currentRecords, PaginationOptions } = usePagination(filteredData);
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState(''); // Added search term state
 
@@ -693,10 +691,6 @@ tr.data-row td:nth-child(4) {
                 )}
               </CTableBody>
             </CTable>
-          </div>
-          
-          <div className="d-flex justify-content-center mt-3">
-            <PaginationOptions />
           </div>
         </CCardBody>
       </CCard>
