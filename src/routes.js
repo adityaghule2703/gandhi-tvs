@@ -399,6 +399,12 @@ const CalculateCommission = React.lazy(() => import('./views/subdealer/commissio
 const SubdealerDeliveryChallan = React.lazy(() => import('./views/subdealer/booking/DeliveryChallan'))
 const AllBooking = React.lazy(() => import('./views/subdealer/booking/AllBooking'))
 
+//User Management
+const AllRoles = React.lazy(()=>import('./views/roles/AllRoles'))
+const CreateRole = React.lazy(()=>import('./views/roles/CreateRole'))
+const AddUser = React.lazy(()=>import('./views/users/AddUser'))
+const UsersList = React.lazy(()=>import('./views/users/UsersList'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -555,9 +561,13 @@ const routes = [
   { path:'/subdealer/payment', name:'Subdealer Payment', element:SubdealerPayment},
   { path:'/subdealer/payment-summary', name:'Payment Summary', element:SubdealerPaymentList},
   { path:'/subdealer/payment-verification', name:'Payment Verification', element:PaymentVerification},
-  { path:'/subdealer/delivery-challan', name:'Delivery Challan', element:SubdealerDeliveryChallan}
+  { path:'/subdealer/delivery-challan', name:'Delivery Challan', element:SubdealerDeliveryChallan},
 
-  
+  //User Management
+  { path:'/roles/all-role', name:'All Roles', element:AllRoles},
+  { path:'/roles/create-role', name:'Create Role', element:CreateRole},
+  { path:'/users/add-user', name:'Add User', element:AddUser},
+  { path:'/users/users-list', name:'Users List', element:UsersList},
   
 
 ]

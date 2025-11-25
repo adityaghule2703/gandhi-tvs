@@ -1273,12 +1273,12 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Create Role',
-        to: '/sales-report',
+        to: '/roles/create-role',
       },
       {
         component: CNavItem,
         name: 'All Role',
-        to: '/periodic-report',
+        to: '/roles/all-role',
       },
     ],
   },
@@ -1292,12 +1292,12 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Add User',
-        to: '/sales-report',
+        to: '/users/add-user',
       },
       {
         component: CNavItem,
         name: 'User List',
-        to: '/periodic-report',
+        to: '/users/users-list',
       },
     ],
   },
